@@ -1,0 +1,75 @@
+{
+  "dataset": {
+    "held_out_path": "G:\\Razorpay\\backend\\data\\held_out.csv",
+    "candidate_rows": 25000,
+    "transactions": 5000,
+    "source": "sealed held_out.csv"
+  },
+  "assumptions": {
+    "amount_by_bucket_paise": {
+      "low": 2500,
+      "medium": 15000,
+      "high": 100000
+    },
+    "action_cost_inr": {
+      "RETRY_LATER": 1.0,
+      "ALTERNATIVE_PAYMENT": 3.0,
+      "CUSTOMER_MESSAGE": 0.5,
+      "STOP": 0.0
+    },
+    "static_baseline": [
+      "RETRY_LATER_1h",
+      "RETRY_LATER_24h"
+    ],
+    "ai_threshold": 0.38,
+    "max_interventions": 2
+  },
+  "static_baseline": {
+    "transactions": 5000,
+    "recovered": 2789,
+    "gross_recovered_paise": 105857500,
+    "action_cost_paise": 817600,
+    "net_recovered_paise": 105039900,
+    "retry_count": 8176,
+    "unnecessary_retries": 5387,
+    "recovery_actions": 8176,
+    "failed_recovery_actions": 5387,
+    "stopped": 2211,
+    "action_counts": {
+      "RETRY_LATER": 8176
+    },
+    "recovery_rate": 0.5578,
+    "gross_recovered_inr": 1058575.0,
+    "action_cost_inr": 8176.0,
+    "net_recovered_inr": 1050399.0
+  },
+  "ai_strategy": {
+    "transactions": 5000,
+    "recovered": 3201,
+    "gross_recovered_paise": 115115000,
+    "action_cost_paise": 1354150,
+    "net_recovered_paise": 113760850,
+    "retry_count": 669,
+    "unnecessary_retries": 273,
+    "recovery_actions": 5029,
+    "failed_recovery_actions": 1828,
+    "stopped": 1799,
+    "action_counts": {
+      "ALTERNATIVE_PAYMENT": 4277,
+      "CUSTOMER_MESSAGE": 83,
+      "RETRY_LATER": 669
+    },
+    "recovery_rate": 0.6402,
+    "gross_recovered_inr": 1151150.0,
+    "action_cost_inr": 13541.5,
+    "net_recovered_inr": 1137608.5
+  },
+  "uplift": {
+    "incremental_gross_recovered_paise": 9257500,
+    "incremental_net_recovered_paise": 8720950,
+    "incremental_gross_recovered_inr": 92575.0,
+    "incremental_net_recovered_inr": 87209.5,
+    "recovery_rate_lift_points": 8.24,
+    "net_uplift_pct": 8.3
+  }
+}

@@ -1,0 +1,77 @@
+# =========================
+# Secrets / environment
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Logs / scratch output
+# =========================
+*.log
+test_out.txt
+backend/test_out.txt
+db.txt
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# =========================
+# Frontend / Node
+# =========================
+node_modules/
+dist/
+build/
+.vite/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# =========================
+# IDE / OS
+# =========================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.swn
+
+# =========================
+# Local model backups
+# =========================
+backend/data/model.backup-*.pkl
+
+# =========================
+# Local development / experimental scripts
+# =========================
+backend/diagnose.py
+backend/diagnose2.py
+backend/inspect_db.py
+backend/check_routes.py
+backend/e2e_test.py
+backend/live_demo_test.py
+backend/test_parser.py
+backend/train_models.py
+backend/tune_threshold.py
+backend/tune2.py
+
+# =========================
+# Internal AI development docs
+# =========================
+docs/DESIGN.md
+docs/MEMORY.md
+docs/PHASES.md
+docs/PRD.md
+docs/RULES.md
